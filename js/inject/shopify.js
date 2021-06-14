@@ -4,8 +4,6 @@ let profile;
 let shopifyFullACOEnabled;
 
 window.onload = function () {
-  console.log("SHITS WORKING");
-
   chrome.storage.sync.get(
     {
       ["ShopifyProfile"]: {},
@@ -17,10 +15,6 @@ window.onload = function () {
       let shopifyToggle = result.shopifyToggle;
       let shopifyAcoEnabled = result.shopifyAcoEnabled;
       shopifyFullACOEnabled = result.shopifyFullACOEnabled;
-
-      console.log(shopifyToggle);
-      console.log(shopifyFullACOEnabled);
-      console.log(shopifyAcoEnabled);
 
       console.log("Value currently is " + result["ShopifyProfile"]);
       profile = JSON.stringify(result["ShopifyProfile"]);
@@ -119,22 +113,3 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
     }, 1000);
   }
 });
-// const fillInfoForm = function (found) {
-//   //////////////////// INFORMATION PAGE ////////////////////
-//   document.getElementsByName("checkout[email]")[0].value = found.email;
-
-//   document.getElementsByName("checkout[billing_address][first_name]")[1].value =
-//     found.name.split(" ", 1);
-//   document.getElementsByName("checkout[billing_address][last_name]")[1].value =
-//     found.name.split(/[, ]+/).pop();
-// document.getElementsByName("checkout[billing_address][address1]")[1].value = [
-//   found.address1,
-//   found.address2,
-// ].join(", ");
-//   document.getElementsByName("checkout[billing_address][city]")[1].value =
-//     found.city;
-//   document.getElementsByName("checkout[billing_address][zip]")[1].value =
-//     found.postcode;
-//   document.getElementsByName("checkout[billing_address][country]")[1].value =
-//     found.country;
-// };

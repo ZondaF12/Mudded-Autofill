@@ -3,8 +3,6 @@
 let profile;
 
 window.onload = function () {
-  console.log("SHITS WORKING");
-
   chrome.storage.sync.get(
     { ["SupremeProfile"]: {}, supremeToggle: 0, supremeAcoEnabled: false },
     function (result) {
