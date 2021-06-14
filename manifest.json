@@ -1,0 +1,37 @@
+{
+  "name": "Mudded Autofill",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Webpage form Autofill Tool",
+  "icons": { "128": "images/icon_128.png" },
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Mudded Autofill"
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*/checkouts/*"],
+      "js": ["js/inject/shopify.js"]
+    },
+    {
+      "matches": ["https://*.shopifycs.com/*"],
+      "js": ["js/inject/shopify-card.js"],
+      "all_frames": true
+    },
+    {
+      "matches": ["https://www.supremenewyork.com/checkout"],
+      "js": ["js/inject/supreme.js"]
+    },
+    {
+      "matches": ["https://checkout.stripe.com/*"],
+      "js": ["js/inject/stripe.js"],
+      "all_frames": true
+    }
+  ]
+}

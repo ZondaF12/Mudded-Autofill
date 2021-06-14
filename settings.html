@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../css/settings.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Mudded Autofill</title>
+  </head>
+  <body>
+    <div id="main-popup">
+      <img src="../images/icon.png" alt="Mudded Autofill" class="logo-icon" />
+      <p>Settings</p>
+    </div>
+
+    <div class="module-settings">
+      <div class="shopify-Settings">
+        <h3>Shopify Settings</h3>
+        <label class="settings-label">Process Forms</label>
+        <label class="switch">
+          <input type="checkbox" id="shopify-aco" />
+          <span class="slider round"></span>
+        </label>
+        <br />
+        <label class="settings-label">Submit Payment</label>
+        <label class="switch">
+          <input type="checkbox" id="shopify-full-aco" />
+          <span class="slider round"></span>
+        </label>
+        <hr class="settings-line" />
+        <h3 class="supreme-settings">Supreme Settings</h3>
+        <label class="settings-label">Supreme ACO</label>
+        <label class="switch">
+          <input type="checkbox" id="supreme-aco" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="nav">
+      <a href="popup.html">
+        <button id="profile-page">
+          <span class="material-icons"> home </span>
+        </button>
+      </a>
+      <a href="profiles.html">
+        <button id="profile-page">
+          <span class="material-icons"> perm_identity </span>
+        </button>
+      </a>
+    </div>
+    <script type="text/javascript" src="../js/settings.js"></script>
+  </body>
+</html>

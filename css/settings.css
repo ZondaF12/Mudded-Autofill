@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1c2838;
+  color: #73b8a8;
+  font-family: "Poppins", sans-serif;
+  width: 500px;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+#main-popup {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#main-popup p {
+  font-size: 30px;
+}
+
+#main-popup img {
+  width: 110px;
+  height: auto;
+}
+
+.module-settings {
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.settings-check {
+  padding: 10px;
+  align-items: left;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 93px;
+  background: #151d2a;
+  height: 100%;
+}
+
+.nav button {
+  margin: 4px;
+  padding: 7px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background: #387773;
+  color: white;
+  font-weight: 600;
+  width: 140px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav button:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.button-active {
+  background-color: #a6d9ca;
+}
+
+/* ========================================== SLIDER ========================================== */
+.shopify-settings h3 {
+  margin: 10px;
+}
+
+.settings-label {
+  color: white;
+  text-align: left;
+  display: inline-block;
+  margin: 5px;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+}
+
+.settings-line {
+  margin: 10px;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

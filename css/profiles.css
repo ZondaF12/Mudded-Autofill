@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1c2838;
+  color: #73b8a8;
+  font-family: "Poppins", sans-serif;
+  width: 500px;
+  height: 480px;
+  text-align: center;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.profile {
+  margin-top: 30px;
+  padding: 5px;
+}
+
+input,
+select {
+  font-family: "Poppins", sans-serif;
+  padding: 7px;
+  outline: none;
+  border: 1px solid #387773;
+  border-radius: 3px;
+  margin: 4px;
+  background: #387773;
+  color: white;
+  transition: 200ms;
+  width: 200px;
+}
+
+.cards {
+  width: 129px;
+}
+
+input:focus {
+  border: 1px solid #f7a3e0;
+}
+
+::placeholder {
+  color: #b8b8b8;
+}
+#site-profile {
+  width: 415px;
+  margin-bottom: 30px;
+}
+#email {
+  width: 415px;
+}
+
+.delete {
+  background-color: red;
+}
+
+.save {
+  background-color: green;
+}
+
+#save-profile,
+#delete-profile {
+  margin-top: 15px;
+  padding: 6px;
+  outline: none;
+  border: none;
+  width: 120px;
+  color: white;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 600;
+  cursor: pointer;
+}
+
+#save-profile:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+#delete-profile:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  background: #151d2a;
+  height: 20%;
+}
+
+.nav button {
+  margin: 4px;
+  padding: 7px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background: #387773;
+  color: white;
+  font-weight: 600;
+  width: 140px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav button:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+input:invalid {
+  border: 2px red;
+}
+
+input:invalid:required {
+  border: 2px red;
+}

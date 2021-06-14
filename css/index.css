@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1c2838;
+  color: #73b8a8;
+  font-family: "Poppins", sans-serif;
+  width: 500px;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+#main-popup {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#main-popup p {
+  font-size: 30px;
+}
+
+#main-popup img {
+  width: 110px;
+  height: auto;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.module-settings {
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.site-settings {
+  max-width: 300px;
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-button {
+  margin: 4px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background: #387773;
+  color: white;
+  font-weight: 500;
+  width: 140px;
+  cursor: pointer;
+}
+
+.site-button:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.disabled {
+  background-color: #8f8f8f;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130px;
+  background: #151d2a;
+  height: 100%;
+}
+
+.nav button {
+  margin: 4px;
+  padding: 7px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background: #387773;
+  color: white;
+  font-weight: 600;
+  width: 140px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav button:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.button-active {
+  background-color: #a6d9ca;
+}
