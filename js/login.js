@@ -2,25 +2,40 @@
 
 // Elements
 const loginBtn = document.querySelector("#activate");
+// Variables
 const API_KEY = "pk_blCqQNGOEeLfp5MvPyAqY2BFxbP3jpWZ";
-const getLicense = localStorage.getItem("keyFound");
-console.log(getLicense);
 
-document.addEventListener("DOMContentLoaded", function () {
-  loginBtn.addEventListener("click", loginSequence);
-});
+let getLicense = localStorage.getItem("keyFound");
+if (getLicense) {
+  getLicense = JSON.parse(getLicense);
+  console.log(getLicense.key);
+}
+
+const checkKey = async function (key) {
+  try {
+    const license = await fetch(`https://api.hyper.co/v4/licenses/${key}`, {
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+      },
+    }).then(res => res.json());
+    console.log(license.plan.active);
+
+    if (getLicense.key != null && license.plan.active === true) {
+      location.replace("popup.html");
+    }
+  } catch {
+    loginBtn.addEventListener("click", loginSequence);
+  }
+};
+
+checkKey(getLicense.key);
 
 const loginSequence = async function () {
+  console.log(1);
   const licenseKey = document.querySelector("#key").value;
   if (licenseKey != undefined) retrieveLicense(licenseKey);
   else console.log("No Key found!");
 };
-
-if (getLicense != null) {
-  location.replace("popup.html");
-} else {
-  loginSequence();
-}
 
 function log(content) {
   const now = new Date().toISOString().replace(/T/, " ").replace(/\..+/, "");
@@ -41,6 +56,7 @@ async function retrieveLicense(key) {
       location.replace("popup.html");
     }
   } catch {
+    alert("License not found!");
     throw new Error("License not found");
   }
 }
