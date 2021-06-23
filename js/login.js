@@ -6,10 +6,16 @@ const loginBtn = document.querySelector("#activate");
 const API_KEY = "pk_blCqQNGOEeLfp5MvPyAqY2BFxbP3jpWZ";
 
 let getLicense = localStorage.getItem("keyFound");
-if (getLicense) {
-  getLicense = JSON.parse(getLicense);
-  console.log(getLicense.key);
-}
+
+window.onload = function () {
+  if (getLicense) {
+    getLicense = JSON.parse(getLicense);
+    console.log(getLicense.key);
+    checkKey(getLicense.key);
+  } else {
+    loginBtn.addEventListener("click", loginSequence);
+  }
+};
 
 const checkKey = async function (key) {
   try {
@@ -27,8 +33,6 @@ const checkKey = async function (key) {
     loginBtn.addEventListener("click", loginSequence);
   }
 };
-
-checkKey(getLicense.key);
 
 const loginSequence = async function () {
   console.log(1);
