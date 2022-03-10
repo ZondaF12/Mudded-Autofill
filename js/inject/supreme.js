@@ -34,14 +34,14 @@ const fillInfoForm = function (found, supremeAcoEnabled) {
     "#order_billing_name": found.name,
     "#order_email": found.email,
     "#order_tel": found.phone,
-    "#bo": found.address1,
-    "#oba3": found.address2,
+    "#order_billing_address": found.address1,
+    "#order_billing_address_2": found.address2,
     "#order_billing_city": found.city,
     "#order_billing_zip": found.postcode,
-    "#cnb": found.cardNumber,
+    "#credit_card_number": found.cardNumber,
     "#credit_card_month": found.cardExpMonth,
     "#credit_card_year": found.cardExpYear,
-    "#vval": found.cardCVV,
+    "#credit_card_verification_value": found.cardCVV,
   };
 
   Object.keys(fields).forEach(id => {
